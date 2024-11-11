@@ -4,7 +4,7 @@ import TaskForm from './components/TaskForm';
 import { v4 as uuidv4 } from 'uuid'; 
 import './App.css';
 
-// Custom Hook for managing local storage
+
 const useLocalStorage = (key, initialValue) => {
   const [storedValue, setStoredValue] = useState(() => {
     try {
@@ -30,29 +30,29 @@ const useLocalStorage = (key, initialValue) => {
 };
 
 const App = () => {
-  // Use the custom hook to manage tasks in localStorage
+  
   const [tasks, setTasks] = useLocalStorage('tasks', []);
 
-  // Add a new task
+
   const addTask = (task) => {
     setTasks([...tasks, task]);
   };
 
-  // Edit an existing task
+
   const editTask = (updatedTask) => {
     setTasks(tasks.map(task => 
       task.id === updatedTask.id ? updatedTask : task
     ));
   };
 
-  // Delete a task
+ 
   const deleteTask = (id) => {
     if (window.confirm("Are you sure you want to delete this task?")) {
       setTasks(tasks.filter(task => task.id !== id));
     }
   };
 
-  // Toggle task completion
+
   const toggleCompletion = (id) => {
     setTasks(tasks.map(task => 
       task.id === id ? { ...task, completed: !task.completed } : task

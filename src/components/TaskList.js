@@ -2,7 +2,7 @@ import React from 'react';
 import TaskItem from './TaskItem';
 
 const TaskList = ({ tasks, editTask, deleteTask, toggleCompletion }) => {
-  // Sort tasks: uncompleted tasks first, then completed
+ 
   const sortedTasks = [...tasks].sort((a, b) => 
     a.completed === b.completed ? 0 : a.completed ? 1 : -1
   );

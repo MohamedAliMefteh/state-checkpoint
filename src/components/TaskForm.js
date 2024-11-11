@@ -26,7 +26,7 @@ const TaskForm = ({ addTask }) => {
 
     addTask(newTask);
 
-    // Clear the form
+   
     setTaskName('');
     setTaskDescription('');
   };

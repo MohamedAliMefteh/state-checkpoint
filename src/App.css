@@ -1,5 +1,5 @@
 :root {
-  /* Modern Color Palette */
+
   --primary-color: #4a90e2;
   --secondary-color: #50c878;
   --background-color: #f4f6f9;
@@ -38,7 +38,7 @@ body {
   color: var(--primary-color);
 }
 
-/* Task Form Styling */
+
 .task-form {
   display: flex;
   flex-direction: column;
@@ -76,7 +76,7 @@ body {
   background-color: #3a7bd5;
 }
 
-/* Task List Styling */
+
 .task-list {
   list-style: none;
 }
@@ -132,7 +132,7 @@ body {
   opacity: 0.6;
 }
 
-/* Responsive Design */
+
 @media (max-width: 600px) {
   .app-container {
     padding: 1rem;
